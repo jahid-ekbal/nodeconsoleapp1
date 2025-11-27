@@ -89,6 +89,35 @@ function printBrandingHeader(user) {
  ╚██████╔╝██║   ██║   ██║  ██║╚██████╔╝██████╔╝
   ╚═════╝ ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ 
 ${colors.reset}`);
+    // Print the logo in a colorful animated way
+    console.log("\n");
+    // Define the awesome ASCII art logo
+    const logoLines = [
+        "    ██████╗ ███████╗██╗   ██╗███████╗██╗      ██████╗ ██████╗ ███████╗██████╗ ",
+        "    ██╔══██╗██╔════╝██║   ██║██╔════╝██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗",
+        "    ██║  ██║█████╗  ██║   ██║█████╗  ██║     ██║   ██║██████╔╝█████╗  ██║  ██║",
+        "    ██║  ██║██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║     ██║   ██║██╔═══╝ ██╔══╝  ██║  ██║",
+        "    ██████╔╝███████╗ ╚████╔╝ ███████╗███████╗╚██████╔╝██║     ███████╗██████╔╝",
+        "    ╚═════╝ ╚══════╝  ╚═══╝  ╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═════╝ ",
+    ];
+    // Rainbow gradient colors for smooth animation effect
+    const rainbowColors = [
+        "\x1b[38;5;196m", // Red
+        "\x1b[38;5;208m", // Orange
+        "\x1b[38;5;226m", // Yellow
+        "\x1b[38;5;46m", // Green
+        "\x1b[38;5;51m", // Cyan
+        "\x1b[38;5;201m", // Magenta
+    ];
+    // Display logo with animated gradient effect
+    console.log(`${colors.bright}${colors.cyan}${"═".repeat(90)}${colors.reset}`);
+    for (let i = 0; i < logoLines.length; i++) {
+        const colorCode = rainbowColors[i % rainbowColors.length];
+        process.stdout.write(`${colorCode}${colors.bright}${logoLines[i]}${colors.reset}\n`);
+    }
+    console.log(`${colors.bright}${colors.cyan}${"═".repeat(90)}${colors.reset}`);
+    console.log(`${colors.bright}${colors.magenta}${"  ".repeat(22)}✨ WELCOME TO MY DIGITAL PORTFOLIO ✨${colors.reset}`);
+    console.log(`${colors.bright}${colors.cyan}${"═".repeat(90)}${colors.reset}\n`);
     // Name branding
     const name = user.name ?? user.login;
     const nameWidth = name.length + 4;
