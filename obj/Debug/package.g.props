@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <PackageJsonName Condition="$(PackageJsonName) == ''">nodeconsoleapp1</PackageJsonName>
+    <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">1.0.0</PackageJsonVersion>
+    <PackageJsonMain Condition="$(PackageJsonMain) == ''">dist/index.js</PackageJsonMain>
+    <PackageJsonScriptsStart Condition="$(PackageJsonScriptsStart) == ''">node dist/index.js</PackageJsonScriptsStart>
+    <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">tsc</PackageJsonScriptsBuild>
+    <PackageJsonDependenciesNodeFetch Condition="$(PackageJsonDependenciesNodeFetch) == ''">^3.3.2</PackageJsonDependenciesNodeFetch>
+    <PackageJsonDevdependenciesTypescript Condition="$(PackageJsonDevdependenciesTypescript) == ''">^5.6.0</PackageJsonDevdependenciesTypescript>
+    <PackageJsonDevdependenciesTypesNode Condition="$(PackageJsonDevdependenciesTypesNode) == ''">^22.0.0</PackageJsonDevdependenciesTypesNode>
+    <PackageJsonDevdependenciesTypesNodeFetch Condition="$(PackageJsonDevdependenciesTypesNodeFetch) == ''">^2.6.4</PackageJsonDevdependenciesTypesNodeFetch>
+    <PackageJsonType Condition="$(PackageJsonType) == ''">module</PackageJsonType>
+  </PropertyGroup>
+</Project>
