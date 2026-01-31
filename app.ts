@@ -124,6 +124,46 @@ function printBrandingHeader(user: GitHubUser) {
 ${colors.reset}`
 	);
 
+	// Print the logo in a colorful way
+
+	// Define the logo lines
+	console.log("\n\n");
+	console.log("\n\n");
+	console.log("\n\n");
+
+	const lines = [
+		"$$$$$$\\  $$\\   $$\\ $$$$$$$\\  $$\\   $$\\          $$$$$\\  $$$$$$\\  $$\\   $$\\ $$$$$$\\ $$$$$$$\\  ",
+		"$$  __$$\\ $$ |  $$ |$$  __$$\\ $$ |  $$ |         \\__$$ |$$  __$$\\ $$ |  $$ |\\_$$  _|$$  __$$\\ ",
+		"$$ /  \\__|$$ |  $$ |$$ |  $$ |$$ |  $$ |            $$ |$$ /  $$ |$$ |  $$ |  $$ |  $$ |  $$ |",
+		"$$ |$$$$\\ $$ |  $$ |$$$$$$$  |$$ |  $$ |            $$ |$$$$$$$$ |$$$$$$$$ |  $$ |  $$ |  $$ |",
+		"$$ |\\_$$ |$$ |  $$ |$$  __$$< $$ |  $$ |      $$\\   $$ |$$  __$$ |$$  __$$ |  $$ |  $$ |  $$ |",
+		"$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |      $$ |  $$ |$$ |  $$ |$$ |  $$ |  $$ |  $$ |  $$ |",
+		"\\$$$$$$  |\\$$$$$$  |$$ |  $$ |\\$$$$$$  |      \\$$$$$$  |$$ |  $$ |$$ |  $$ |$$$$$$\\ $$$$$$$  |",
+		" \\______/  \\______/ \\__|  \\__| \\______/        \\______/ \\__|  \\__|\\__|  \\__|\\______|\\_______/ ",
+	];
+
+	// Define some colors
+	const logoColors = [
+		colors.red,
+		colors.green,
+		colors.yellow,
+		colors.blue,
+		colors.cyan,
+		colors.magenta,
+		colors.white,
+		colors.reset,
+	];
+
+	for (let i = 0; i < lines.length; i++) {
+		const colorCode = logoColors[i % logoColors.length] || colors.reset;
+		process.stdout.write(colorCode);
+		console.log(lines[i]);
+	}
+
+	process.stdout.write(colors.reset);
+
+	console.log("\n\n");
+
 	// Name branding
 	const name = user.name ?? user.login;
 	const nameWidth = name.length + 4;
