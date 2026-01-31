@@ -1,13 +1,4 @@
-<<<<<<< Updated upstream
-# nodeconsoleapp1
-=======
 
-
-
-
-# Node Console App
-
-✨ HI I AM JAHID EKBAL MALLICK
 
 
 
@@ -36,6 +27,3 @@ Run the main application:
 ```
 
 
-
-
->>>>>>> Stashed changes
